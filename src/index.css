@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 192 40% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 192 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 192 40% 20%;
+
+    --primary: 192 55% 23%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 184 15% 86%;
+    --secondary-foreground: 192 55% 23%;
+
+    --muted: 184 15% 96%;
+    --muted-foreground: 192 40% 20%;
+
+    --card-light: 192 15% 98%;
+    --card-light-foreground: 192 40% 20%;
+
+    --accent: 192 55% 23%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 184 15% 86%;
+    --input: 184 15% 86%;
+    --ring: 192 55% 23%;
+
+    --radius: 0.5rem;
+
+    /* Custom color palette */
+    --japanese-indigo: 192 55% 23%;
+    --japanese-indigo-75: 192 55% 23% / 0.4;
+    --yankees-blue: 192 57% 20%;
+    --gainsboro: 184 15% 86%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 192 40% 20%;
+    --sidebar-primary: 192 55% 23%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 184 15% 86%;
+    --sidebar-accent-foreground: 192 55% 23%;
+    --sidebar-border: 184 15% 86%;
+    --sidebar-ring: 192 55% 23%;
+  }
+
+  .dark {
+    --background: 192 57% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 192 57% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 192 57% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 192 55% 23%;
+
+    --secondary: 192 55% 23%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 192 55% 23%;
+    --muted-foreground: 184 15% 86%;
+
+    --card-light: 192 55% 25%;
+    --card-light-foreground: 0 0% 98%;
+
+    --accent: 192 55% 23%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 192 55% 23%;
+    --input: 192 55% 23%;
+    --ring: 184 15% 86%;
+
+    --sidebar-background: 192 57% 20%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 184 15% 86%;
+    --sidebar-primary-foreground: 192 57% 20%;
+    --sidebar-accent: 192 55% 23%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 192 55% 23%;
+    --sidebar-ring: 184 15% 86%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-raleway;
+    min-height: 100vh;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+  
+  /* Heading styles for TipTap editor and rendered content */
+  .prose h1, h1 {
+    @apply text-3xl font-bold mb-4 mt-6 text-foreground;
+  }
+  
+  .prose h2, h2 {
+    @apply text-2xl font-semibold mb-3 mt-5 text-foreground;
+  }
+  
+  .prose h3, h3 {
+    @apply text-xl font-semibold mb-2 mt-4 text-foreground;
+  }
+  
+  .prose h4, h4 {
+    @apply text-lg font-medium mb-2 mt-3 text-foreground;
+  }
+  
+  .prose h5, h5 {
+    @apply text-base font-medium mb-1 mt-2 text-foreground;
+  }
+  
+  .prose p, p {
+    @apply mb-3 text-foreground;
+  }
+  
+  .prose ul, .prose ol {
+    @apply mb-3 pl-6;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-border pl-4 italic text-muted-foreground;
+  }
+}
